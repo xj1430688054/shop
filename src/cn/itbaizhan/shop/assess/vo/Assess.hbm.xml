@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="cn.itbaizhan.shop.assess.vo.Assess" table="assess">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="oid"/>
+		<property name="uid"/>
+		<property name="msg"/>
+		<property name="updatetime"/>
+		<property name="remark"/>
+		<property name="status"/>
+		<property name="pid"/>
+		<property name="username"/>
+		
+
+		
+		<!-- 订单与用户关联配置 -->
+		<!-- <many-to-one name="user" lazy="false" class="cn.itbaizhan.shop.user.vo.User" column="uid"/>
+		<many-to-one name="order" lazy="false" class="cn.itbaizhan.shop.order.vo.Order" column="oid"/> -->
+		<!-- <one-to-one name="product" lazy="false" class="cn.itbaizhan.shop.product.vo.Product"  not-null="true"/> -->
+		
+		<!-- <one-to-one name="product" lazy="false" class="cn.itbaizhan.shop.product.vo.Product" column="pid"/> -->
+	 
+	</class>
+</hibernate-mapping>
